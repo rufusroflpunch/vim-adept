@@ -42,3 +42,15 @@ keys[';'] = {
   [';'] = _VIM.normalMode,
 }
 ```
+
+
+## leader functionality 
+
+Another common idiom in the Vim world is the **leader key** , which is usually mapped to  `,`.
+
+```lua
+ keys.normal_mode[','] = {
+   ['t'] = function() io.quick_open() end,
+   ['b'] = function() ui.switch_buffer(true) end,
+ }
+ ```
